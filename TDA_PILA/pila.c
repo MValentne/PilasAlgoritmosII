@@ -30,6 +30,8 @@ void Apilar(tipoPila *punteroPila, int x) {
     *punteroPila = nuevoNodo;
 }
 
+//============ TO-DO ===============
+// Arreglarlo para que imprima de final a principio (fondo a tope de pila)
 void ImprimirTESTING(tipoPila punteroPila) {
     printf("[");
     while (!PilaVacia(punteroPila)) {

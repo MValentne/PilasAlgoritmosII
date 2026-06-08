@@ -20,6 +20,6 @@ bool PilaVacia(tipoPila punteroPila);
 void CrearNodo(tipoPila *nuevoN);
 void Apilar(tipoPila *punteroPila, int x);
 void Desapilar(tipoPila *punteroPila, int *x);
-void ImprimirPila(tipoPila punteroPila);
+void ImprimirTESTING(tipoPila punteroPila);
 
 #endif
