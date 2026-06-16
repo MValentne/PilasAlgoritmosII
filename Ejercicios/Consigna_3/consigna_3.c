@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pilas.h"
+#include "../../TDA_PILA/pila.h"
 
-int main() { 
+int main() {
 tipoPila pila1, pila2, resultadoSuma;
 CrearPila(&pila1);
 CrearPila(&pila2);
