@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "pilas.h"
+#include "../../TDA_PILA/pila.h"
+
+void CopiarPila(tipoPila *pilaOriginal, tipoPila *pilaCopia);
 
 int main() {
     tipoPila original, copiaDestino;
@@ -40,4 +42,22 @@ int main() {
         aux = aux->sig;
     }
     printf("]\n");
+}
+
+void CopiarPila(tipoPila *pilaOriginal, tipoPila *pilaCopia){
+    tipoPila aux;
+    CrearPila(&aux);
+    int valor;
+    // Vuelco pila en una auxiliar
+    while(!PilaVacia(*pilaOriginal)){
+        Desapilar(pilaOriginal, &valor);
+        Apilar(&aux, valor);
+    }
+
+    // Vuelvo a volcar para recuperar la original y generar el clon.
+    while(!PilaVacia(aux)){
+        Desapilar(&aux, &valor);
+        Apilar(pilaCopia, valor);
+        Apilar(pilaOriginal, valor);
+    }
 }
